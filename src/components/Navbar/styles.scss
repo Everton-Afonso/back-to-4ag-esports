@@ -1,0 +1,20 @@
+.navbar_container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e1e1e1;
+
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+
+    .navbar_menu {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+  }
+}

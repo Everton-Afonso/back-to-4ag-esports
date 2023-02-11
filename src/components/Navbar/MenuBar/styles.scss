@@ -1,0 +1,20 @@
+.menu_bar_container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+  border: 1px solid #e1e1e1;
+  border-radius: 14px;
+  position: relative;
+
+  aside {
+    border-right: 1px solid #e1e1e1;
+    height: 100%;
+  }
+
+  figure {
+    padding: 15px 30px;
+    border-left: 1px solid #e1e1e1;
+  }
+}

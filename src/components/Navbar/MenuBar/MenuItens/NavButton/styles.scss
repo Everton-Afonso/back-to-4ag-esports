@@ -1,0 +1,12 @@
+.sub-nav {
+  overflow: hidden;
+  transition: 0.5s;
+
+  button {
+    padding-left: 64px;
+
+    &.active::before {
+      background: #f9f9f9;
+    }
+  }
+}
