@@ -1,0 +1,25 @@
+.login_container {
+  display: flex;
+  gap: 18px;
+
+  .login {
+    button {
+      color: #6c5dd3;
+      background-color: #f0eeff;
+    }
+  }
+  .sing_up {
+    button {
+      color: #ffffff;
+      background-color: #ff754c;
+
+      align-items: center;
+      display: flex;
+      gap: 10px;
+
+      img {
+        width: 13px;
+      }
+    }
+  }
+}
