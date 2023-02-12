@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import NavButton from "./NavButton";
+import MenuButton from "./MenuButton";
 
 import "./styles.scss";
 
@@ -25,7 +25,7 @@ const MenuItens = () => {
         {menuItems.map((item) => (
           <>
             {menuItems && (
-              <NavButton
+              <MenuButton
                 key={item.name}
                 name={item.name}
                 item={item}

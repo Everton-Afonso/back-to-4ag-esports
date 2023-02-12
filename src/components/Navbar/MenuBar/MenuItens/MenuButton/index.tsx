@@ -4,7 +4,7 @@ import { ButtonProps } from "../../../../types/types";
 
 import "./styles.scss";
 
-const NavButton: FC<ButtonProps> = ({
+const MenuButton: FC<ButtonProps> = ({
   name,
   item,
   isActive,
@@ -21,7 +21,7 @@ const NavButton: FC<ButtonProps> = ({
       <button
         type="button"
         onClick={handlerMenuActive}
-        className={isActive ? "active" : ""}
+        className={`menu_button ${isActive ? "active" : ""}`}
       >
         {item?.icon && <Icon icon={item?.icon} />}
         <span>{name}</span>
@@ -29,14 +29,14 @@ const NavButton: FC<ButtonProps> = ({
       </button>
       {item?.items && (
         <div
-          className={`sub-nav ${isActive ? "open" : ""}`}
+          className={`sub_nav ${isActive ? "open" : ""}`}
           style={{
             height: !isActive ? 0 : navRef.current?.clientHeight,
           }}
         >
-          <div ref={navRef} className="sub-nav-inner">
+          <div ref={navRef} className="sub_nav_inner">
             {item?.items.map((subItem, index) => (
-              <NavButton
+              <MenuButton
                 key={index}
                 name={subItem}
                 isActive={isActive}
@@ -50,4 +50,4 @@ const NavButton: FC<ButtonProps> = ({
   );
 };
 
-export default NavButton;
+export default MenuButton;

@@ -1,3 +1,5 @@
+import { isMobile } from "react-device-detect";
+
 import MenuBar from "./MenuBar";
 
 import Logo4Ag from "../../assets/img/logo-4-ag.png";
@@ -8,16 +10,33 @@ import Login from "./Login";
 const Navbar = () => {
   return (
     <header className="navbar_container">
-      <section className="navbar_content global_conatiner">
-        <figure>
-          <img src={Logo4Ag} alt="Logo da pagina" />
-        </figure>
+      {isMobile ? (
+        <section
+          className={`${
+            isMobile ? "navbar_content_mobile" : "navbar_content"
+          } global_conatiner`}
+        >
+          <div className="navbar_menu navbar_menu_mobile">
+            <figure>
+              <img src={Logo4Ag} alt="Logo da pagina" />
+            </figure>
 
-        <div className="navbar_menu">
+            <Login />
+          </div>
           <MenuBar />
-          <Login />
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="navbar_content global_conatiner">
+          <figure>
+            <img src={Logo4Ag} alt="Logo da pagina" />
+          </figure>
+
+          <div className="navbar_menu">
+            <MenuBar />
+            <Login />
+          </div>
+        </section>
+      )}
     </header>
   );
 };

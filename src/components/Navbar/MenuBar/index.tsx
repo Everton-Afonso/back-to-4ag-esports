@@ -7,13 +7,19 @@ import "./styles.scss";
 const MenuBar = () => {
   return (
     <section className="menu_bar_container">
-      <MenuItens />
-      <div>
-        <p>Search on our Esports Gaming...</p>
+      <div className="menu_bar_itens">
+        <MenuItens />
       </div>
-      <figure>
+      <form className="menu_bar_search">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search on our Esports Gaming..."
+        />
+      </form>
+      <div className="menu_bar_icons">
         <img src={IconSearch} alt="Icon search" />
-      </figure>
+      </div>
     </section>
   );
 };

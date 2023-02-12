@@ -1,9 +1,18 @@
+.navbar_content_mobile {
+  flex-direction: column;
+
+  .menu_bar_container {
+    max-width: 100%;
+  }
+}
+
 .navbar_container {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #e1e1e1;
 
-  .navbar_content {
+  .navbar_content,
+  .navbar_menu_mobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +24,29 @@
       align-items: center;
       justify-content: flex-end;
       gap: 18px;
+    }
+  }
+
+  .navbar_menu_mobile {
+    justify-content: space-between;
+
+    figure {
+      width: 100%;
+      max-width: 100px;
+    }
+
+    .login_container {
+      width: 100%;
+      justify-content: end;
+
+      .sing_up,
+      .login {
+        width: auto;
+
+        button {
+          padding: 16px 10px;
+        }
+      }
     }
   }
 }

@@ -1,4 +1,11 @@
-.sub-nav {
+.menu_button {
+  .material-symbols-outlined {
+    font-size: 22px;
+  }
+}
+
+.sub_nav {
+  position: absolute;
   overflow: hidden;
   transition: 0.5s;
 
